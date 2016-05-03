@@ -1,0 +1,3 @@
+@function stamp($text, $base) {
+  @return mix($base, rgba($text, 1), (1 - opacity($text)) * 100%);
+}

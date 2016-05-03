@@ -1,0 +1,28 @@
+@import './variables.scss';
+
+html, body {
+  margin: 0;
+  height: 100%;
+
+  font: 16px 'Roboto', Arial, sans-serif;
+  background: $color-background;
+}
+
+div, span {
+  box-sizing: border-box;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-shrink: 0;
+  align-content: flex-start;
+
+  border: 0 solid black;
+  margin: 0;
+  padding: 0;
+}
+
+:global(#root) {
+  height: 100%;
+}

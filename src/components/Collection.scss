@@ -1,0 +1,14 @@
+.collection {
+  flex-shrink: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  overflow: auto;
+
+  padding: 0.4rem;
+
+  &::after {
+    content: '';
+    flex-grow: 100;
+  }
+}

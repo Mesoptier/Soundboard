@@ -1,0 +1,42 @@
+.ripple {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.circle {
+  margin: -50px 0 0 -50px;
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+  background: rgba(0,0,0,0.05);
+
+  pointer-events: none;
+
+  opacity: 0;
+  transform: scale(10);
+  transition:
+    opacity 0.3s ease-in 0.1s,
+    transform 0.4s ease-in;
+}
+
+.circlePressed {
+  composes: circle;
+
+  opacity: 0;
+  transform: scale(0);
+  transition: none;
+}
+
+.circlePressedStart {
+  composes: circlePressed;
+
+  opacity: 1;
+  transform: scale(1.5);
+  transition:
+    transform 1.5s cubic-bezier(0.185, 0.955, 0.215, 0.885);
+}
