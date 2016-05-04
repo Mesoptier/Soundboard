@@ -14,7 +14,7 @@ import Collection from '../components/Collection.jsx';
 })
 export default class App extends Component {
 
-  static propTypes = {    
+  static propTypes = {
     items: PropTypes.array,
     searchQuery: PropTypes.string,
     search: PropTypes.func,
