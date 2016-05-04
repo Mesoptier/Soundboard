@@ -6,7 +6,7 @@ export default function configureStore() {
     collection,
   });
 
-  const initialState = window.__INITIAL_STATE__;
-  
-  return createStore(reducer, initialState);
-};
+  const initialState = window.INITIAL_STATE;
+  const enhancer = window.devToolsExtension ? window.devToolsExtension() : undefined;
+  return createStore(reducer, initialState, enhancer);
+}
