@@ -3,8 +3,6 @@ import React, { PropTypes } from 'react';
 import SearchInput from './SearchInput.jsx';
 
 export default function Header({ searchQuery, onSearchChange }) {
-  console.log(styles);
-
   return (
     <div className={styles.header}>
       <SearchInput
