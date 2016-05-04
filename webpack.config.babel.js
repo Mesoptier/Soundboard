@@ -1,5 +1,4 @@
 import { LoaderOptionsPlugin } from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 import autoprefixer from 'autoprefixer';
 
 const baseConfig = {
@@ -8,16 +7,11 @@ const baseConfig = {
     `${__dirname}/src/entry.js`,
   ],
   output: {
-    path: `${__dirname}/public`,
+    path: `${__dirname}/public/build`,
     filename: 'bundle.js',
+    devtoolModuleFilenameTemplate: '/[absolute-resource-path]',
   },
-  devtool: 'source-map',
-
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: `${__dirname}/src/index.ejs`,
-    }),
-  ],
+  devtool: 'eval',
 
   resolve: {
     extensions: ['', '.js', '.jsx'],
@@ -41,10 +35,6 @@ const baseConfig = {
             'react-hot-loader/babel',
           ],
         },
-      },
-      {
-        test: /\.ejs$/,
-        loader: 'ejs-compiled',
       },
       {
         test: /\.scss$/,
@@ -73,7 +63,7 @@ const developmentConfig = {
   ...baseConfig,
 
   plugins: [
-    ...baseConfig.plugins,
+    // ...baseConfig.plugins,
 
     new LoaderOptionsPlugin({
       debug: true,
