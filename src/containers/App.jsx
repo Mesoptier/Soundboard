@@ -3,8 +3,8 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { autobind } from 'core-decorators';
 import { search } from '../reducers/collection';
-import Header from '../components/Header';
-import Collection from '../components/Collection';
+import Header from '../components/Header.jsx';
+import Collection from '../components/Collection.jsx';
 
 @connect(({ collection }) => ({
   items: collection.filteredItems ? collection.filteredItems : collection.items,

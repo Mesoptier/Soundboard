@@ -1,6 +1,6 @@
 import styles from './Collection.scss';
 import React, { PropTypes } from 'react';
-import Sample from './Sample';
+import Sample from './Sample.jsx';
 
 export default function Collection({ items = [], onSelect }) {
   return (
