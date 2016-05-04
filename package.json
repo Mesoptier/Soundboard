@@ -36,6 +36,7 @@
     "webpack-dev-server": "^2.0.0-beta"
   },
   "dependencies": {
+    "babel-core": "^6.8.0",
     "core-decorators": "^0.12.2",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
