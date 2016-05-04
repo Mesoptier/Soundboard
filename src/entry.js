@@ -6,12 +6,13 @@ import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 import App from './containers/App.jsx';
 import configureStore from './configureStore';
+import consoleErrorReporter from './consoleErrorReporter';
 
 const store = configureStore();
 const root = document.getElementById('root');
 
 ReactDOM.render((
-  <AppContainer>
+  <AppContainer errorReporter={consoleErrorReporter}>
     <Provider store={store}>
       <App />
     </Provider>

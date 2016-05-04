@@ -42,6 +42,7 @@
     "react-dom": "^15.0.2",
     "react-ink": "^5.1.0",
     "react-redux": "^4.4.5",
+    "redbox-react": "^1.2.4",
     "redux": "^3.5.2",
     "redux-actions": "^0.9.1"
   }
