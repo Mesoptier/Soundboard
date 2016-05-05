@@ -12,3 +12,14 @@
     flex-grow: 100;
   }
 }
+
+.item {
+  flex-grow: 1;
+  margin: 5px;
+}
+
+.itemFiltered {
+  composes: item;
+
+  display: none;
+}

@@ -8,24 +8,39 @@ export const search = createAction(SEARCH, (searchQuery) => ({ searchQuery }));
 // Initial state
 const initialState = {
   items: [],
-  filteredItems: [],
   searchQuery: '',
 };
 
 // Reducers
 export default handleActions({
+
   [SEARCH]: (state, { payload }) => {
     const { searchQuery } = payload;
 
-    const filteredItems = state.items.filter((item) => (
-      item.name.includes(searchQuery) ||
-      item.location.includes(searchQuery)
-    ));
+    const items = state.items.map((item) => {
+      let filtered;
+
+      if (searchQuery === '') {
+        filtered = false;
+      } else {
+        filtered = !item.name.includes(searchQuery) && !item.location.includes(searchQuery);
+      }
+
+      if (item.filtered === filtered) {
+        return item;
+      }
+
+      return {
+        ...item,
+        filtered,
+      };
+    });
 
     return {
       ...state,
       searchQuery,
-      filteredItems,
+      items,
     };
   },
+
 }, initialState);

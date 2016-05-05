@@ -7,7 +7,7 @@ import Header from '../components/Header.jsx';
 import Collection from '../components/Collection.jsx';
 
 @connect(({ collection }) => ({
-  items: collection.filteredItems ? collection.filteredItems : collection.items,
+  items: collection.items,
   searchQuery: collection.searchQuery,
 }), {
   search,
