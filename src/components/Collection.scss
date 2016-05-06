@@ -1,11 +1,22 @@
-.collection {
-  flex-shrink: 1;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: stretch;
-  overflow: auto;
+@import '../styles/variables';
+
+.outer {
+  margin-top: $header-size;
+  margin-bottom: $player-size;
+
+  //flex: 1 1 auto;
+  //overflow-x: hidden;
+  //overflow-y: scroll;
 
   padding: 0.4rem;
+}
+
+.inner {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  touch-action: pan-y;
 
   &::after {
     content: '';
@@ -14,7 +25,7 @@
 }
 
 .item {
-  flex-grow: 1;
+  flex: 1 1 auto;
   margin: 5px;
 }
 

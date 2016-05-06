@@ -1,4 +1,5 @@
-@import './variables.scss';
+@import './variables';
+@import './block';
 
 html, body {
   margin: 0;
@@ -8,19 +9,8 @@ html, body {
   background: $color-background;
 }
 
-div, span, .block {
-  box-sizing: border-box;
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  flex-shrink: 0;
-  align-content: flex-start;
-
-  border: 0 solid black;
-  margin: 0;
-  padding: 0;
+div, span {
+  @extend .block;
 }
 
 :global(#root) {

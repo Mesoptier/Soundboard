@@ -1,0 +1,12 @@
+@import '../styles/variables';
+
+.player {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: $player-size;
+
+  background: #263238;
+}
+

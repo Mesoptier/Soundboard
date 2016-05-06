@@ -1,9 +1,11 @@
 import { combineReducers, createStore } from 'redux';
 import collection from './reducers/collection';
+import player from './reducers/player';
 
 export default function configureStore() {
   const reducer = combineReducers({
     collection,
+    player,
   });
 
   const initialState = window.INITIAL_STATE;
