@@ -25,12 +25,12 @@ if (isset($urlParts[1])) {
 }
 
 switch ($firstSlug) {
-	// Serve the request form the API.
-	case 'api':
-		// Slim relies on SCRIPT_NAME to be set up correctly, and PHP's built-in server doesn't do this right, so fix it.
-		$_SERVER['SCRIPT_NAME'] = '/api/index.php';
-		include('public/api/index.php');
-		break;
+//	// Serve the request form the API.
+//	case 'api':
+//		// Slim relies on SCRIPT_NAME to be set up correctly, and PHP's built-in server doesn't do this right, so fix it.
+//		$_SERVER['SCRIPT_NAME'] = '/api/index.php';
+//		include('public/api/index.php');
+//		break;
 
 	// Serve a file from the samples (replaces the .htaccess file in /public/samples).
 	case 'samples':
@@ -40,5 +40,5 @@ switch ($firstSlug) {
 
 	// Serve the default index.
 	default:
-		include('public/index.html');
+		include('public/index.php');
 }

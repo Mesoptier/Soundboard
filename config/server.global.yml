@@ -6,13 +6,19 @@ server:
   router:
     routes:
       samples_list:
-        path: /samples
+        path: /api/samples
         controller: Villermen\Soundboard\Controller\SamplesController
         action: listAction
         methods: [ get ]
 
       samples_get:
-        path: /samples/{file:.+}
+        path: /api/samples/{file:.+}
         controller: Villermen\Soundboard\Controller\SamplesController
         action: getAction
+        methods: [ get ]
+
+      index:
+        path: /{path:.*}
+        controller: Villermen\Soundboard\Controller\IndexController
+        action: indexAction
         methods: [ get ]

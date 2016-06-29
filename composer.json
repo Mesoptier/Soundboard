@@ -15,7 +15,8 @@
     "require": {
         "php": ">=5.5.0",
         "slim/slim": "^3.1",
-        "symfony/yaml": "^3.1"
+        "symfony/yaml": "^3.1",
+        "slim/twig-view": "^2.1"
     },
 		"autoload": {
 			"psr-4": { "Villermen\\Soundboard\\": "src/server/" }

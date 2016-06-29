@@ -90,7 +90,7 @@ class SamplesController extends Controller
 		$requestUri = $request->getUri();
 
 		// Replace the always present /api with /samples for the sample base url.
-		$basePath = substr($requestUri->getBasePath(), 0, -4) . '/samples';
-		return $requestUri->getScheme() . '://' . $requestUri->getHost() . $basePath;
+		$basePath = $requestUri->getBasePath() . '/samples';
+		return $requestUri->getScheme() . '://' . $requestUri->getHost() . ':' . $requestUri->getPort() . $basePath;
 	}
 }
